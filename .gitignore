@@ -1,0 +1,24 @@
+node_modules
+.pnpm-debug.log*
+tc-organization/dist/**
+.DS_Store
+
+packages/**/node_modules
+packages/**/package-lock.json
+packages/**/.pnpm-debug.log*
+
+docs/docs/.vitepress/dist
+docs/docs-v2/dist/**
+packages/**/docs-v2/.vuepress/.cache/**
+packages/**/docs-v2/.vuepress/.temp/**
+packages/**/docs-v2/dist/**
+
+packages/**/theme-chalk/dist/**
+# packages/**/theme-chalk/lib/**
+
+docs/**/dist
+.DS_Store
+# lib
+# dist/
+
+coverage
