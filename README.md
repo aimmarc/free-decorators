@@ -236,12 +236,12 @@ class MyComponent extends Vue {
 export default toComponent(MyComponent);
 ```
 ### props
-props建议通过@tcwl/utils的buildProps进行构建，这样方便将props类型对象转换为ts类型，从而传入范型获得类型提示。
+props建议通过element-plus的buildProps进行构建，这样方便将props类型对象转换为ts类型，从而传入范型获得类型提示。
 ```Javascript
 import { Component, Setup, toComponent, Vue, Watch, WatchEffect } from 'vue3-class-component';
 import { StoreType } from '@/common/interfaces/Store';
 import { ExtractPropTypes, ref } from 'vue';
-import { buildProps, definePropType } from '@tcwl/utils';
+import { buildProps, definePropType } from 'element-plus';
 
 const props = buildProps({
     num: {
