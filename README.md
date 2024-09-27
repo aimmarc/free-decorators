@@ -481,7 +481,7 @@ export default toComponent(MyComponent);
 ### 用法
 使用get即可实现类似computed的功能。
 ```Javascript
-import { Component, toComponent, Vue, Watch } from 'tc-vue-decorator';
+import { Component, toComponent, Vue, Watch } from 'vue3-class-component';
 
 @Component({
     emits: ['youer-event'],
@@ -501,7 +501,7 @@ export default toComponent(App);
 ### 可写的
 这种写法和computed的set一致。
 ```Javascript
-import { Component, toComponent, Vue, Watch } from 'tc-vue-decorator';
+import { Component, toComponent, Vue, Watch } from 'vue3-class-component';
 
 @Component({
     emits: ['change'],
@@ -526,7 +526,7 @@ export default toComponent(App);
 ### JSX
 支持JSX写法，但目前是实验特性，可能会存在致命bug，请谨慎使用。
 ```Javascript
-import { Component, toComponent, Vue, Setup, Watch, Prop } from 'tc-vue-decorator';
+import { Component, toComponent, Vue, Setup, Watch, Prop } from 'vue3-class-component';
 import { Ref, ref } from 'vue';
 
 @Component
