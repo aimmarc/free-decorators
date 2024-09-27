@@ -1,11 +1,12 @@
 import * as vue from "vue";
 import Lifecycle from "./lifecycle";
+import { setupPropsResolver } from "../connect/utils";
 
 /**
  * View层基类
  *   核心封装vue生命周期、store、响应式操作
  */
-export abstract class Vue<S = any, P = any, E = any> extends Lifecycle {
+export abstract class Vue<P = any, E = any> extends Lifecycle {
     protected emit: vue.SetupContext<E>["emit"];
     protected attrs: vue.SetupContext["attrs"];
     protected expose: vue.SetupContext["expose"];
@@ -46,26 +47,13 @@ export abstract class Vue<S = any, P = any, E = any> extends Lifecycle {
         vue.onErrorCaptured(() => {
             this.errorCaptured();
         });
+        this.executeSetup();
     }
 
-    /**
-     * 提供一个setup钩子，满足组件需要在setup阶段进行的操作
-     */
-    setup(props: P, ctx: vue.SetupContext<E>): void {}
-
-    static store: any;
-
-    static useStore<T>(store: T) {
-        this.store = store;
+    private executeSetup() {
+        // 前置处理，执行setup属性处理函数
+        setupPropsResolver(this.constructor, this);
     }
-
-    /**
-     * 统一输出 store
-     *
-     * @protected
-     * @memberof Component
-     */
-    protected store: S = Component.store;
 
     /**
      * 封装 vue getCurrentInstance
@@ -126,6 +114,32 @@ export abstract class Vue<S = any, P = any, E = any> extends Lifecycle {
 }
 
 // 兼容老版本
-export const BaseView = Vue;
+export abstract class BaseView<S = any, P = any, E = any> extends Vue<P, E> {
+    constructor(props: P, ctx: vue.SetupContext<E>) {
+        super(props, ctx);
+        this.__warningTips__();
+    }
 
-export const Component = Vue;
+    protected __warningTips__() {
+        console.warn("'BaseView' is unsafe, please change to use 'Vue'.");
+    }
+
+    /**
+     * 统一输出 store
+     *
+     * @protected
+     * @memberof Component
+     */
+    protected store: S = BaseView.store;
+
+    static store: any;
+    /**
+     * 兼容老API
+     * @param store
+     */
+    static useStore<T>(store: T) {
+        this.store = store;
+    }
+}
+
+// export const Component = Vue;

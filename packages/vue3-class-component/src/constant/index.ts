@@ -10,3 +10,23 @@ export const SLEEP_KEY = "-Sleep-";
 export const RETRY_KEY = "-Retry-";
 export const CONFIGURE_KEY = "-ConfigureKey-";
 export const RESPONSE_DTO_KEY = "-ResponseDtoKey-";
+export const LIFE_CYCLE = [
+    // "mounted",
+    // "setup",
+    // "beforeMount",
+    // "beforeUpdate",
+    // "updated",
+    // "beforeUnmount",
+    // "unmounted",
+    // "activated",
+    // "deactivated",
+    // "errorCaptured",
+    // "render",
+    "computed",
+    "emit",
+    "expose",
+    "getCurrentInstance",
+    "watch",
+    "ref",
+    "reactive",
+];

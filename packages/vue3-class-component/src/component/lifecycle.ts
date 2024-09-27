@@ -1,8 +1,16 @@
+import { VNode } from "vue";
+
 /**
  * 生命周期
  */
 abstract class Lifecycle {
-    constructor() {}
+    /**
+     * 生命周期 setup
+     * 提供一个setup钩子，满足组件需要在setup阶段进行的操作
+     */
+    protected setup() {}
+
+    protected render?(): JSX.Element | VNode;
 
     /**
      * 生命周期 onBeforeMount

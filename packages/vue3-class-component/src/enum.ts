@@ -32,6 +32,14 @@ export enum MetadataKey {
     MIDDLEWARECONFIGPROXYEXCLUDE_METADATA = "design:exclude",
     MIDDLEWARECONFIGPROXYFORROUTES_METADATA = "design:forRoutes",
     VUE3_OPTIONS = "__vue3Options__",
+    VUE3_WATCHS = "__vue3Watchs__",
+    VUE3_SETUP_METHODS = "__vue3SetupMethods",
+    VUE3_SETUP_PROPS = "__vue3SetupProps",
+    VUE3_WATCH_EFFECT = "__vue3WatchEffect",
+    VUE3_INJECT = "__vue3Inject",
+    VUE3_PROVIDE = "__vue3Provide",
+    VUE3_PROP = "__Vue3Prop",
+    VUE3_MARK_RAW = "__Vue3MarkRaw",
 }
 
 export enum RequestMethod {
