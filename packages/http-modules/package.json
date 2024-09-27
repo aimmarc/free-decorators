@@ -1,0 +1,36 @@
+{
+  "name": "vue3-class-component",
+  "version": "0.0.1",
+  "description": "> TODO: description",
+  "author": "niko.wen <niko.weno@ly.com>",
+  "homepage": "",
+  "license": "ISC",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "files": [
+    "dist",
+    "lib",
+    "src",
+    "README.md",
+    "index.ts"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git@git.17usoft.com:tcyl-web-common/t-web-components.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: run tests from root\" && exit 1"
+  },
+  "dependencies": {
+    "@vue/compiler-dom": "3.2.44",
+    "@vue/runtime-core": "3.2.44",
+    "@vue/runtime-dom": "3.2.44",
+    "axios": "^0.27.2",
+    "axios-retry": "^4.3.0",
+    "class-validator": "~0.14.1",
+    "dayjs": "^1.11.7",
+    "reflect-metadata": "~0.2.2",
+    "uuid": "^9.0.0",
+    "vue": "^3.2.44"
+  }
+}

@@ -1,0 +1,58 @@
+import { HttpStatus } from "../enum";
+
+export const tips: Record<HttpStatus, string> = {
+    [HttpStatus.OK]: "请求成功",
+    [HttpStatus.CONTINUE]: "请求成功",
+    [HttpStatus.SWITCHING_PROTOCOLS]: "请求成功",
+    [HttpStatus.PROCESSING]: "请求成功",
+    [HttpStatus.EARLYHINTS]: "请求成功",
+    [HttpStatus.CREATED]: "请求成功",
+    [HttpStatus.ACCEPTED]: "请求成功",
+    [HttpStatus.NON_AUTHORITATIVE_INFORMATION]: "请求成功",
+    [HttpStatus.NO_CONTENT]: "请求成功",
+    [HttpStatus.RESET_CONTENT]: "请求成功",
+    [HttpStatus.PARTIAL_CONTENT]: "请求成功",
+    [HttpStatus.AMBIGUOUS]: "请求成功",
+    [HttpStatus.MOVED_PERMANENTLY]: "请求成功",
+    [HttpStatus.FOUND]: "请求成功",
+    [HttpStatus.SEE_OTHER]: "请求成功",
+    [HttpStatus.NOT_MODIFIED]: "请求成功",
+    [HttpStatus.TEMPORARY_REDIRECT]: "请求成功",
+    [HttpStatus.PERMANENT_REDIRECT]: "请求成功",
+    [HttpStatus.BAD_REQUEST]: "错误的请求",
+    [HttpStatus.UNAUTHORIZED]: "需要登录",
+    [HttpStatus.PAYMENT_REQUIRED]: "需要付费的请求",
+    [HttpStatus.FORBIDDEN]: "请求未授权",
+    [HttpStatus.NOT_FOUND]: "请求资源未找到",
+    [HttpStatus.METHOD_NOT_ALLOWED]: "请求方法错误",
+    [HttpStatus.NOT_ACCEPTABLE]: "不被接受的请求",
+    [HttpStatus.PROXY_AUTHENTICATION_REQUIRED]: "服务器禁止访问",
+    [HttpStatus.REQUEST_TIMEOUT]: "请求所花时间太长（请求超时）",
+    [HttpStatus.CONFLICT]: "请求与当前服务器端的状态相冲突",
+    [HttpStatus.GONE]:
+        "被请求的资源在服务器上已经不再可用，而且没有任何已知的转发地址",
+    [HttpStatus.LENGTH_REQUIRED]:
+        "由于缺少确定的Content-Length首部字段,服务器拒绝客户端的请求",
+    [HttpStatus.PRECONDITION_FAILED]: "前提条件失败",
+    [HttpStatus.PAYLOAD_TOO_LARGE]: "请求实体过大",
+    [HttpStatus.URI_TOO_LONG]: "请求URI过长",
+    [HttpStatus.UNSUPPORTED_MEDIA_TYPE]: "不支持的媒体类型",
+    [HttpStatus.REQUESTED_RANGE_NOT_SATISFIABLE]: "无法处理所请求的数据区间",
+    [HttpStatus.EXPECTATION_FAILED]:
+        "响应客户端的Expect请求头部时,无法满足所请求的期望,因此无法完成请求",
+    [HttpStatus.I_AM_A_TEAPOT]: "服务器拒绝处理客户端的请求,因为它是一个茶壶",
+    [HttpStatus.MISDIRECTED]:
+        "从当前客户端所在的IP地址到服务器的连接数超过了服务器许可的最大范围",
+    [HttpStatus.UNPROCESSABLE_ENTITY]:
+        "服务器理解客户端的请求,但无法处理该请求",
+    [HttpStatus.FAILED_DEPENDENCY]:
+        "由于请求的操作依赖于另一个操作,且该操作失败,因此无法在资源上执行该方法",
+    [HttpStatus.PRECONDITION_REQUIRED]: "必须发送相应的请求头才能执行请求操作",
+    [HttpStatus.TOO_MANY_REQUESTS]: "请求次数过多被服务器拒绝",
+    [HttpStatus.INTERNAL_SERVER_ERROR]: "服务器内部错误",
+    [HttpStatus.NOT_IMPLEMENTED]: "超过服务器的能力范围",
+    [HttpStatus.BAD_GATEWAY]: "网关错误",
+    [HttpStatus.SERVICE_UNAVAILABLE]: "服务器无法处理请求",
+    [HttpStatus.GATEWAY_TIMEOUT]: "网关超时",
+    [HttpStatus.HTTP_VERSION_NOT_SUPPORTED]: "HTTP版本不受支持",
+};
