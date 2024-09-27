@@ -1,5 +1,3 @@
-# tc-vue-decorator
+# vue3-class-component
 
-vue 装饰器
-
-
+vue 装饰器组件
