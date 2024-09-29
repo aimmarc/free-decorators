@@ -1,8 +1,8 @@
 {
-  "name": "vue3-class-component",
+  "name": "@aimmarc/http-module",
   "version": "0.0.1",
   "description": "> TODO: description",
-  "author": "niko.wen <niko.weno@ly.com>",
+  "author": "aimmarc <965964317@qq.com>",
   "homepage": "",
   "license": "ISC",
   "main": "lib/index.js",

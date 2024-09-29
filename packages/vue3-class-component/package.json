@@ -1,12 +1,13 @@
 {
-  "name": "vue3-class-component",
+  "name": "@aimmarc/vue3-class-component",
   "version": "0.0.1",
   "description": "> TODO: description",
-  "author": "niko.wen <niko.weno@ly.com>",
+  "author": "aimmarc <965964317@qq.com>",
   "homepage": "",
   "license": "ISC",
   "main": "lib/index.es.js",
   "types": "lib/src/index.d.ts",
+  "private": false,
   "files": [
     "dist",
     "lib",
