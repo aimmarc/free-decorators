@@ -22,3 +22,5 @@ docs/**/dist
 # dist/
 
 coverage
+
+*.tgz
