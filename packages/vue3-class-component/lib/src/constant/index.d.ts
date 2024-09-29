@@ -10,3 +10,4 @@ export declare const SLEEP_KEY = "-Sleep-";
 export declare const RETRY_KEY = "-Retry-";
 export declare const CONFIGURE_KEY = "-ConfigureKey-";
 export declare const RESPONSE_DTO_KEY = "-ResponseDtoKey-";
+export declare const LIFE_CYCLE: string[];

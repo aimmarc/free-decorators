@@ -5,8 +5,8 @@
   "author": "niko.wen <niko.weno@ly.com>",
   "homepage": "",
   "license": "ISC",
-  "main": "lib/index.js",
-  "types": "lib/index.d.ts",
+  "main": "lib/index.es.js",
+  "types": "lib/src/index.d.ts",
   "files": [
     "dist",
     "lib",
@@ -19,7 +19,8 @@
     "url": "git@git.17usoft.com:tcyl-web-common/t-web-components.git"
   },
   "scripts": {
-    "test": "echo \"Error: run tests from root\" && exit 1"
+    "test": "echo \"Error: run tests from root\" && exit 1",
+    "build": "vite build && npx tsc"
   },
   "dependencies": {
     "@vue/compiler-dom": "3.2.44",
@@ -30,7 +31,11 @@
     "class-validator": "~0.14.1",
     "dayjs": "^1.11.7",
     "reflect-metadata": "~0.2.2",
+    "typescript": "^5.5.3",
     "uuid": "^9.0.0",
     "vue": "^3.2.44"
+  },
+  "devDependencies": {
+    "vite": "^4.4.5"
   }
 }

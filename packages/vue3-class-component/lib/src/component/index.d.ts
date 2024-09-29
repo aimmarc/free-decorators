@@ -4,26 +4,14 @@ import Lifecycle from "./lifecycle";
  * View层基类
  *   核心封装vue生命周期、store、响应式操作
  */
-export declare abstract class Vue<S = any, P = any, E = any> extends Lifecycle {
+export declare abstract class Vue<P = any, E = any> extends Lifecycle {
     protected emit: vue.SetupContext<E>["emit"];
     protected attrs: vue.SetupContext["attrs"];
     protected expose: vue.SetupContext["expose"];
     protected slots: vue.SetupContext<E>["slots"];
     protected props: P;
     constructor(props: P, ctx: vue.SetupContext<E>);
-    /**
-     * 提供一个setup钩子，满足组件需要在setup阶段进行的操作
-     */
-    setup(props: P, ctx: vue.SetupContext<E>): void;
-    static store: any;
-    static useStore<T>(store: T): void;
-    /**
-     * 统一输出 store
-     *
-     * @protected
-     * @memberof Component
-     */
-    protected store: S;
+    private executeSetup;
     /**
      * 封装 vue getCurrentInstance
      *
@@ -74,5 +62,20 @@ export declare abstract class Vue<S = any, P = any, E = any> extends Lifecycle {
      */
     protected vue: typeof vue;
 }
-export declare const BaseView: typeof Vue;
-export declare const Component: typeof Vue;
+export declare abstract class BaseView<S = any, P = any, E = any> extends Vue<P, E> {
+    constructor(props: P, ctx: vue.SetupContext<E>);
+    protected __warningTips__(): void;
+    /**
+     * 统一输出 store
+     *
+     * @protected
+     * @memberof Component
+     */
+    protected store: S;
+    static store: any;
+    /**
+     * 兼容老API
+     * @param store
+     */
+    static useStore<T>(store: T): void;
+}

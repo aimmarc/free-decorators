@@ -39,7 +39,7 @@ importers:
         version: 9.0.1
       vue:
         specifier: ^3.2.44
-        version: 3.4.34
+        version: 3.4.34(typescript@5.6.2)
 
   packages/play/vue3:
     dependencies:
@@ -107,12 +107,19 @@ importers:
       reflect-metadata:
         specifier: ~0.2.2
         version: 0.2.2
+      typescript:
+        specifier: ^5.5.3
+        version: 5.6.2
       uuid:
         specifier: ^9.0.0
         version: 9.0.1
       vue:
         specifier: ^3.2.44
-        version: 3.4.34
+        version: 3.4.34(typescript@5.6.2)
+    devDependencies:
+      vite:
+        specifier: ^4.4.5
+        version: 4.4.5
 
 packages:
 
@@ -1090,7 +1097,7 @@ packages:
     dependencies:
       '@vue/compiler-ssr': 3.4.34
       '@vue/shared': 3.4.34
-      vue: 3.4.34
+      vue: 3.4.34(typescript@5.6.2)
     dev: false
 
   /@vue/server-renderer@3.5.9(vue@3.5.9):
@@ -1629,7 +1636,7 @@ packages:
       typescript: 5.6.2
     dev: true
 
-  /vue@3.4.34:
+  /vue@3.4.34(typescript@5.6.2):
     resolution: {integrity: sha512-VZze05HWlA3ItreQ/ka7Sx7PoD0/3St8FEiSlSTVgb6l4hL+RjtP2/8g5WQBzZgyf8WG2f+g1bXzC7zggLhAJA==}
     peerDependencies:
       typescript: '*'
@@ -1642,6 +1649,7 @@ packages:
       '@vue/runtime-dom': 3.4.34
       '@vue/server-renderer': 3.4.34(vue@3.4.34)
       '@vue/shared': 3.4.34
+      typescript: 5.6.2
     dev: false
 
   /vue@3.5.9(typescript@5.6.2):
