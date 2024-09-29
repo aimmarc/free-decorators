@@ -30,6 +30,7 @@
     "class-validator": "~0.14.1",
     "dayjs": "^1.11.7",
     "reflect-metadata": "~0.2.2",
+    "typescript": "^5.5.3",
     "uuid": "^9.0.0",
     "vue": "^3.2.44"
   }

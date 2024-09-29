@@ -7,3 +7,4 @@ export * from "./validate";
 export * from "./pipes";
 export * from "./http/decorators";
 export * from "./transform";
+export * from "./module";

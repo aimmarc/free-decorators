@@ -1,13 +1,13 @@
 <template>
-  <div>{{ name }}</div>
+	<div>{{ name }}</div>
 </template>
 
 <script lang="ts">
-import { Vue, Component, toComponent } from "@aimmarc/vue3-class-component";
+import { Vue, Component, toComponent } from '@aimmarc/vue3-class-component';
 
 @Component
 class TestClass extends Vue {
-  name = "TestClass";
+	name = 'TestClass';
 }
 
 export default toComponent(TestClass);
