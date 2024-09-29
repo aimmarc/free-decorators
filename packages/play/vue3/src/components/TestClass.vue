@@ -3,7 +3,7 @@
 </template>
 
 <script lang="ts">
-import { Vue, Component, toComponent } from "vue3-class-component";
+import { Vue, Component, toComponent } from "@aimmarc/vue3-class-component";
 
 @Component
 class TestClass extends Vue {
