@@ -20,7 +20,7 @@
   },
   "scripts": {
     "test": "echo \"Error: run tests from root\" && exit 1",
-    "build": "vite build && npx tsc"
+    "build": "vite build && tsc"
   },
   "dependencies": {
     "@vue/compiler-dom": "3.2.44",
