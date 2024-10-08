@@ -1,15 +1,21 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import reactLogo from './assets/react.svg';
 import viteLogo from '/vite.svg';
 import './App.css';
 import AppModule from './modules/app/app.module';
 import { ModuleFactory } from '@aimmarc/http-module/index';
+import ClassComponent from './components/ClassComponent';
+import ClassComponent2 from './components/ClassComponent2';
 
 const appModule = ModuleFactory.create(AppModule); // 通过ModuleFactory.create创建appModule
 
 function App() {
 	const [count, setCount] = useState(0);
-	console.log('appModule', appModule);
+	appModule.test();
+
+	useEffect(() => {
+		appModule.appController.getAppInfo();
+	}, []);
 
 	return (
 		<>
@@ -37,6 +43,8 @@ function App() {
 			<p className="read-the-docs">
 				Click on the Vite and React logos to learn more
 			</p>
+			<ClassComponent name="12" />
+			<ClassComponent2 name="12" />
 		</>
 	);
 }

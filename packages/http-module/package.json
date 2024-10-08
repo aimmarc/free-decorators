@@ -22,6 +22,7 @@
     "test": "echo \"Error: run tests from root\" && exit 1"
   },
   "dependencies": {
+    "@types/react": "^18.3.3",
     "@vue/compiler-dom": "3.2.44",
     "@vue/runtime-core": "3.2.44",
     "@vue/runtime-dom": "3.2.44",
@@ -29,8 +30,9 @@
     "axios-retry": "^4.3.0",
     "class-validator": "~0.14.1",
     "dayjs": "^1.11.7",
+    "react": "^18.3.1",
     "reflect-metadata": "~0.2.2",
-    "typescript": "^5.5.3",
+    "typescript": "^5.0.4",
     "uuid": "^9.0.0",
     "vue": "^3.2.44"
   }

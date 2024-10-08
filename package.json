@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "play:3": "pnpm --filter play-vue3 dev"
+    "play:3": "pnpm --filter play-vue3 dev",
+    "play:react": "pnpm --filter play-react dev"
   },
   "keywords": [],
   "author": "",
